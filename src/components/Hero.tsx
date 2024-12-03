@@ -95,7 +95,7 @@ const Hero: React.FC = () => {
                                     <FaLinkedin />
                                 </IconButton>
                             </Link>
-                            <Link href="/path/to/your/resume.pdf" target="_blank">
+                            <Link href="/resume.pdf" target="_blank">
                                 <IconButton
                                     aria-label="Resume"
                                     size="2xl"
