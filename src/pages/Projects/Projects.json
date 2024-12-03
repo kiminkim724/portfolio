@@ -1,0 +1,26 @@
+[
+    {
+        "title": "MAPLE",
+        "description": "Massachusetts Platform for Legislative Engagement (MAPLE). This project, developed through Code for Boston, streamlines the process for residents to submit and read legislative testimonies. \n\n Key Contributions:\n- Full-stack development: Implemented new designs from Figma into responsive code.\n- Backend enhancements: Fixed backfill code for Typesense to correctly update collection aliases with new schemas \n- Notification system: Developed features for real-time updates on testimonies and bill histories. \n\n Technologies: React, Next.js, Typescript, Node.js, Firebase, Typesense, Docker",
+        "image": "maple.png",
+        "link": "https://www.mapletestimony.org/"
+    },
+    {
+        "title": "DHF Dashboard",
+        "description": "Delaware Healthcare Facilities (DHF) Dashboard. This application provides detailed data on the accessibility of healthcare services across Delaware, presented at the ZIP Code Tabulation Area (ZCTA) level and in ratios of providers per 1000 residents. \n\n Key Contributions:\n- Enhanced filtering: Added specialty-level filters for licenses. \n- Geographic insights: Implemented county-level provider views and integrated a map view. \n- Data visualization: Developed features to display provider-to-patient ratios for each specialty. \n\n Technologies: React, Vite, Tailwind, Mapbox, D3.js",
+        "image": "dhf.png",
+        "link": "https://dhf-dashboard.pages.dev/"
+    },
+    {
+        "title": "Opiate Prediction Dashboard",
+        "description": "BCCS Opiate Prediction Dashboard. This dashboard displays a list of patients with model predictions indicating their risk of drug abuse. Users can filter and sort the table based on various criteria and use the search option to find specific patients. Public-facing dashboard uses fake data, whereas the regular dashboard interacts with a Flask back-end.\n\n Key Contributions:\n- User interface: Developed a filterable and sortable table for easy data navigation. \n- Search functionality: Implemented a search feature to quickly locate patient records. \n\n Technologies: React, Bootstrap, Visx",
+        "image": "bccs.png",
+        "link": "https://bccs-dashboard.pages.dev/"
+    },
+    {
+        "title": "FCAFE Dashboard",
+        "description": "Dashboard for Fintech CAFE organization to display metrics of their incubator programs and created custom visualizations with visx. \n\n Key Contributions:\n- Data visualization: Created custom visualizations with visx to display key metrics. \n- Visitor tracking: Require email before viewing dashboard to keep track of visitors, with the data stored in Azure. \n\n Technologies: React, Visx, Bootstrap, Azure",
+        "image": "fcafe.png",
+        "link": "https://fcafe-sire.pages.dev/"
+    }
+]
