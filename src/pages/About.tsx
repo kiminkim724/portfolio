@@ -3,7 +3,7 @@ import { Box, Heading, Text, Stack, Image } from '@chakra-ui/react';
 
 const About: React.FC = () => {
     return (
-        <Box h="80vh" p={5} maxW={{ base: "80%", "2xl": "60%" }} mx="auto" alignContent={"center"}>
+        <Box marginTop="144px" p={5} maxW={{ base: "80%", "2xl": "60%" }} mx="auto" alignContent={"center"}>
             <Stack direction={{ base: 'column', xl: 'row' }} gap={[8, 16]} align="center">
                 <Image
                     borderRadius="xl"

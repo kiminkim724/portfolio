@@ -1,13 +1,9 @@
-import React, { useRef } from 'react';
-import { motion, useTransform, useScroll, useSpring, MotionValue } from 'framer-motion';
+import React from 'react';
+import { motion, useScroll, useSpring } from 'framer-motion';
 import "./styles.css"
-import { Box } from '@chakra-ui/react';
+import { Box, Image, Stack } from '@chakra-ui/react';
 import projects from "./Projects.json"
 import { Link } from 'react-router-dom';
-
-function useParallax(value: MotionValue<number>, distance: number) {
-    return useTransform(value, [0, 1], [-distance, distance]);
-}
 
 type Project = {
     title: string;
@@ -17,20 +13,18 @@ type Project = {
 }
 
 function Project({ project }: { project: Project }) {
-    const ref = useRef(null);
-    const { scrollYProgress } = useScroll({ target: ref });
-    const y = useParallax(scrollYProgress, 300);
-
     return (
-        <section>
-            <div ref={ref}>
+        <Stack as="section" direction={{ base: "column", lg: "row" }}>
+            <Box width={{ base: "80%", md: "1/2" }} alignSelf="center" justifySelf="center">
                 <Link to={project.link} target='_blank'>
-                    <img src={`/${project.image}`} alt={project.title} />
+                    <Image src={`/${project.image}`} alt={project.title} fit="contain" />
                 </Link>
-            </div>
-            <motion.h2 style={{ y }}>{project.title}</motion.h2>
-            <motion.p style={{ y }}>{project.description}</motion.p>
-        </section>
+            </Box>
+            <Box width={{ base: "90%", lg: "1/2" }} alignSelf="center" >
+                <motion.h2>{project.title}</motion.h2>
+                <motion.p>{project.description}</motion.p>
+            </Box>
+        </Stack>
     );
 }
 

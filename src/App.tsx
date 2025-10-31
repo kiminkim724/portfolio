@@ -11,7 +11,7 @@ function App() {
   return (
     <Router>
       <Container fluid px="0">
-        <Box position="sticky" top={0} zIndex={1000}>
+        <Box position="fixed" top={0} zIndex={1000}>
           <motion.div
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}

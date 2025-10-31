@@ -1,38 +1,46 @@
-.projects-container section {
-    height: 100vh;
-    width: 95vw;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    position: relative;
-    scroll-snap-align: center;
-    perspective: 500px;
+.projects-container {
+    margin-top: 144px;
 }
 
-.projects-container section>div {
+.projects-container section {
+    height: calc(100vh - 144px);
+    padding-bottom: 144px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
     position: relative;
-    max-height: 50%;
-    max-width: 40%;
-    margin-left: 100px;
+    scroll-snap-align: end;
+    perspective: 500px;
+    gap: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
+    overflow: hidden;
+
+    @media (max-width: 1024px) {
+        padding-bottom: 0px;
+    }
 }
 
 .projects-container h2 {
-    left: 50%;
-    top: 25%;
     font-size: 56px;
     font-weight: 700;
     letter-spacing: -3px;
     line-height: 1.2;
-    position: absolute;
+
+    @media (max-width: 768px) {
+        font-size: 36px;
+        letter-spacing: -2px;
+    }
 }
 
 .projects-container p {
-    left: 50%;
-    top: 35%;
     font-size: 1.25em;
     font-weight: 400;
     white-space: pre-wrap;
-    position: absolute;
+
+    @media (max-width: 768px) {
+        font-size: 1.1em;
+    }
 }
 
 .progress {

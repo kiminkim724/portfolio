@@ -1,5 +1,11 @@
 [
     {
+        "title": "ASJ",
+        "description": "Alliance of Safety and Justice (ASJ) is a multi-state organization that aims to replace over-incarceration with more effective public safety solutions rooted in crime prevention, community health, rehabilitation and support for crime victims. \n\n Key Contributions:\n- Website development: Themed and developed multiple client websites with Next.js and Tailwind CSS, integrated with a Drupal back end. \n- Collaboration: Partnered with designers to ensure consistent branding, accessibility, and responsiveness across platforms. \n\n Technologies: React, Next.js, Typescript, Node.js, Tailwind CSS",
+        "image": "asj.png",
+        "link": "https://allianceforsafetyandjustice.org/"
+    },
+    {
         "title": "MAPLE",
         "description": "Massachusetts Platform for Legislative Engagement (MAPLE). This project, developed through Code for Boston, streamlines the process for residents to submit and read legislative testimonies. \n\n Key Contributions:\n- Full-stack development: Implemented new designs from Figma into responsive code.\n- Backend enhancements: Fixed backfill code for Typesense to correctly update collection aliases with new schemas \n- Notification system: Developed features for real-time updates on testimonies and bill histories. \n\n Technologies: React, Next.js, Typescript, Node.js, Firebase, Typesense, Docker",
         "image": "maple.png",
