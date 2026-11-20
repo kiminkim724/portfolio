@@ -3,22 +3,22 @@ import { Link } from "react-router-dom"
 
 const Header = () => {
     return (
-        <Box px={8} w="100vw">
-            <Flex h={36} alignItems="center">
+        <Box px={{ base: 4, md: 8 }} w="100%">
+            <Flex h="var(--header-height)" alignItems="center" gap={4}>
                 <Link to="/">
-                    <Heading size={{ base: "4xl", md: "6xl" }} fontWeight="bold" color="white">
+                    <Heading size={{ base: "2xl", sm: "4xl", md: "6xl" }} fontWeight="bold" color="white" whiteSpace="nowrap">
                         Kimin Kim
                     </Heading>
                 </Link>
                 <Spacer />
-                <Flex >
+                <Flex gap={{ base: 2, md: 4 }}>
                     <Link to="/about">
-                        <Button size="xl" colorScheme="teal" variant="outline" mr={4}>
+                        <Button size={{ base: "sm", md: "xl" }} colorScheme="teal" variant="outline">
                             About
                         </Button>
                     </Link>
                     <Link to="/projects">
-                        <Button size="xl" colorScheme="teal" variant="outline">
+                        <Button size={{ base: "sm", md: "xl" }} colorScheme="teal" variant="outline">
                             Projects
                         </Button>
                     </Link>

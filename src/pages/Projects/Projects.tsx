@@ -16,9 +16,18 @@ function useParallax(value: MotionValue<number>, distance: number) {
     return useTransform(value, [0, 1], [-distance, distance]);
 }
 
+// Header height at lg+ (matches --header-height in index.css). Parallax only runs at lg+.
+const DESKTOP_HEADER_HEIGHT = 144;
+
 function Project({ project }: { project: Project }) {
     const ref = useRef(null);
-    const { scrollYProgress } = useScroll({ target: ref });
+    // Progress runs from the previous snap point (section top at viewport bottom) to the
+    // next one (section bottom just under the header), so it is exactly 0.5 — and the
+    // text sits at y = 0 — when this section is snapped into view.
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ["start end", `end ${DESKTOP_HEADER_HEIGHT}px`],
+    });
     const y = useParallax(scrollYProgress, 300);
 
     // Use the parallax effect only at 'lg' or larger breakpoints
@@ -29,13 +38,13 @@ function Project({ project }: { project: Project }) {
 
 
     return (
-        <Stack as="section" direction={{ base: "column", lg: "row" }}>
-            <Box width={{ base: "80%", md: "1/2" }} alignSelf="center" justifySelf="center" ref={ref}>
-                <Link to={project.link} target='_blank'>
-                    <Image src={`/${project.image}`} alt={project.title} fit="contain" />
+        <Stack as="section" direction={{ base: "column", lg: "row" }} ref={ref}>
+            <Box width={{ base: "100%", md: "80%", lg: "1/2" }} alignSelf="center">
+                <Link to={project.link} target='_blank' rel="noopener noreferrer">
+                    <Image src={`/${project.image}`} alt={project.title} fit="contain" w="100%" />
                 </Link>
             </Box>
-            <Box width={{ base: "90%", lg: "1/2" }} >
+            <Box width={{ base: "100%", md: "80%", lg: "1/2" }} alignSelf="center">
                 <motion.h2 style={motionStyle}>{project.title}</motion.h2>
                 <motion.p style={motionStyle}>{project.description}</motion.p>
             </Box>

@@ -36,9 +36,8 @@ const Hero: React.FC = () => {
             h="100%"
         >
             <Box maxW="90%" mx="auto" h="100%"
-                alignContent={"center"}>
+                alignContent={"center"} ref={ref}>
                 <motion.div
-                    ref={ref}
                     initial="hidden"
                     animate={isInView ? 'show' : ''}
                     variants={{
@@ -51,18 +50,18 @@ const Hero: React.FC = () => {
                     }}
                 >
                     <motion.div variants={FADE_DOWN}>
-                        <Heading size="6xl" fontWeight="bold" mb={4}>
+                        <Heading size={{ base: "4xl", md: "6xl" }} fontWeight="bold" mb={4}>
                             Hi, I'm Kimin Kim
                         </Heading>
                     </motion.div>
                 </motion.div>
-                <Text fontSize="2xl" mt={8}>
+                <Text fontSize={{ base: "lg", md: "2xl" }} mt={{ base: 6, md: 8 }}>
                     <TypingEffect text="A Passionate Software Developer." /><br /><br />
-                    <TypingEffect text="Currently a Lead Front-end Developer for the Data Lab at Tech Impact." />
+                    <TypingEffect text="Currently a student at Tufts University." /><br />
+                    <TypingEffect text="Previously a Lead Front-end Developer for the Data Lab at Tech Impact." />
                 </Text>
 
                 <motion.div
-                    ref={ref}
                     initial="hidden"
                     animate={isInView ? 'show' : ''}
                     variants={{
@@ -75,7 +74,7 @@ const Hero: React.FC = () => {
                     }}
                 >
                     <motion.div variants={FADE_DOWN}>
-                        <HStack gap={4} justify="center" mt={10}>
+                        <HStack gap={4} justify="center" mt={{ base: 6, md: 10 }}>
                             <Link href="https://github.com/kiminkim724" target="_blank">
                                 <IconButton
                                     aria-label="GitHub"

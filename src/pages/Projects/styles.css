@@ -1,10 +1,10 @@
 .projects-container {
-    margin-top: 144px;
+    margin-top: var(--header-height);
 }
 
 .projects-container section {
-    height: calc(100vh - 144px);
-    padding-bottom: 144px;
+    height: calc(100vh - var(--header-height));
+    padding-bottom: var(--header-height);
     display: flex;
     justify-content: center;
     align-items: end;
@@ -16,8 +16,22 @@
     padding-right: 24px;
     overflow: hidden;
 
-    @media (max-width: 1024px) {
-        padding-bottom: 0px;
+    /* Stacked layout: let each project grow to fit its content instead of clipping it */
+    @media (max-width: 1023px) {
+        height: auto;
+        min-height: calc(100dvh - var(--header-height));
+        justify-content: center;
+        align-items: center;
+        padding-top: 32px;
+        padding-bottom: 48px;
+        overflow: visible;
+        scroll-snap-align: start;
+        scroll-margin-top: var(--header-height);
+    }
+
+    @media (max-width: 767px) {
+        padding-left: 16px;
+        padding-right: 16px;
     }
 }
 

@@ -3,7 +3,7 @@ import Hero from "../components/Hero";
 
 const Home = () => {
     return (
-        <Box h="100vh" alignContent={"center"}>
+        <Box h="100dvh" pt="var(--header-height)" alignContent={"center"}>
             <Hero />
         </Box>
     );

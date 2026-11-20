@@ -1,8 +1,26 @@
+:root {
+    --header-height: 80px;
+}
+
+@media (min-width: 768px) {
+    :root {
+        --header-height: 144px;
+    }
+}
+
 html {
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
     background-color: black;
     height: 100%;
-    overflow: scroll;
+    overflow-y: auto;
+    overflow-x: hidden;
     overscroll-behavior-y: none;
+}
+
+/* Sections can be taller than the viewport on smaller screens, so snap loosely */
+@media (max-width: 1023px) {
+    html {
+        scroll-snap-type: y proximity;
+    }
 }
